@@ -13,7 +13,7 @@ COPY scripts/start.sh /
 COPY scripts/settings.json /var/lib/transmission/
 
 RUN apk -U --no-cache upgrade
-RUN apk add --no-cache transmission-daemon sudo jq
+RUN apk add --no-cache transmission-daemon jq
 RUN mkdir /config
 RUN chmod -R 777 /start.sh /config
 

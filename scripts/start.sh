@@ -21,7 +21,7 @@ fi
 
 [ ! -d ${download_dir} ] && mkdir -p ${download_dir}
 
-chown -R $PUID:$PGID /var/lib/transmission /config ${download-dir}
+chown -R $PUID:$PGID /var/lib/transmission /config ${download_dir}
 
 GROUPNAME=$(getent group $PGID | cut -d: -f1)
 USERNAME=$(getent passwd $PUID | cut -d: -f1)
@@ -38,4 +38,4 @@ then
         USERNAME=transmission-user
 fi
 
-sudo -u $USERNAME -g $GROUPNAME transmission-daemon -f -g /config
+su $USERNAME -c 'transmission-daemon -f -g /config'
