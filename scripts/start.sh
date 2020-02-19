@@ -38,4 +38,4 @@ then
         USERNAME=transmission-user
 fi
 
-su -g $GROUPNAME $USERNAME -c 'transmission-daemon -f -g /config'
+su $USERNAME -c 'transmission-daemon -f -g /config'
