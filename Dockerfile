@@ -1,7 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG BASE_IMAGE_PREFIX
-
-FROM ${BASE_IMAGE_PREFIX}alpine
+FROM alpine
 
 ENV PUID=0
 ENV PGID=0
